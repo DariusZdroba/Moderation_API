@@ -16,9 +16,10 @@ services:
   ollama:
     image: ollama/ollama
     ports:
-      - "11435:11434"  # Ollama service port mapping
+      - "11436:11434"  # Ollama service port mapping
     volumes:
       - ollama_data:/root/.ollama
+      - ./init.sh:/usr/local/bin/init.sh
     networks:
       - app-network
 
