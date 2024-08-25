@@ -24,3 +24,6 @@ export const mailOptions: SMTPTransport.Options = {
     },
 };
 
+
+
+export const LLAMA_PREFIX="The follownig text is sent to you for verification purposes, verify the following text for toxicity such as abuse, profanity, hate speech and so on.I need only one word APPROVED/DISSAPROVED."

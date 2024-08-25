@@ -4,7 +4,7 @@ import http from 'http';
 import { Server } from 'socket.io';
 import express from 'express';
 import log4js from 'log4js';
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 
 const app = express();
 const server = http.createServer(app);
@@ -18,9 +18,9 @@ import routers from './routers';
 
 const logger = log4js.getLogger('ENTRY.index');
 
-mongoose.set('strictQuery', false);
-(async () => await mongoose.connect(db.uri))()
-    .catch(err => logger.error({ err }));
+// mongoose.set('strictQuery', false);
+// (async () => await mongoose.connect(db.uri))()
+//     .catch(err => logger.error({ err }));
 
 // you can specify a path `${origin}/yourPath` or by default it's `${origin}`
 app.use(express.static(files));
